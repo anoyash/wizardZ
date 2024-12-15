@@ -52,6 +52,7 @@ body {
   border-radius: 5px;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
 }
 
 /* navigation styling ends  */
