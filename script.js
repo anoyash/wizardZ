@@ -1,11 +1,4 @@
-var customersLogo = document.querySelectorAll("#customers img");
 var page1Timeline = gsap.timeline();
-
-console.log(customersLogo);
-
-customersLogo.forEach((imgTag)=>{
-  console.log(imgTag);
-})
 
 page1Timeline.from("#logo", {
   y: -20,
@@ -36,8 +29,19 @@ page1Timeline.add([
   }),
 ]);
 
-page1Timeline.from("#customers img", {
-  y: 20,
-  opacity: 0,
-  duration: 0.4,
-});
+page1Timeline.add([
+  gsap.from(".left-customers", {
+    y: 20,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 2,
+    ease: true,
+  }),
+  gsap.from(".right-customers", {
+    y: 20,
+    opacity: 0,
+    duration: 0.6,
+    stagger: -2,
+    ease: true,
+  }),
+]);
